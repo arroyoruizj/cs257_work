@@ -3,5 +3,8 @@ white rice
 french fries
 peanut butter
 toasted bagels
+<<<<<<< HEAD
 tangerines
 
+=======
+>>>>>>> affb0899ea17d407966f97a12a3f12e06dde91f5

@@ -135,7 +135,7 @@ def test_query_five():
     row_list = cur.fetchall()
 
     for row in row_list:
-        print("City: " + str(row[0]) + "Population: " + str(row[1]))
+        print("City: " + str(row[0]) + "\t Population: " + str(row[1]))
 
 
 test_query_one()

@@ -118,7 +118,7 @@ def test_query_four():
 
     cur = conn.cursor()
 
-    chosen_state = input(print("Please choose a state: "))
+    chosen_state = input(print("Please choose a state:"))
 
 test_query_one()
 test_query_two()

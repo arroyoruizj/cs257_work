@@ -45,7 +45,7 @@ def test_query_two():
 
     cur = conn.cursor()
 
-    sql = "SELECT city, MAX(population) FROM cities"
+    sql = "SELECT city, MAX(population) FROM cities GROUP BY city"
     
     cur.execute( sql )
 

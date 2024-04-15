@@ -36,7 +36,7 @@ def test_query_one():
 
     cur = conn.cursor()
 
-    sql = "SELECT name, city FROM cities WHERE city = 'Northfield' "
+    sql = "SELECT city, city FROM cities WHERE city = 'Northfield' "
     
     cur.execute( sql )
 

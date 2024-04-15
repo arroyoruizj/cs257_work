@@ -50,7 +50,7 @@ def test_query_two():
     cur.execute( max_finder )
 
     row = cur.fetchone()[0]
-    print(str(row) + "is the largest city in our datset!")
+    print(str(row) + " is the largest city in our datset!")
 
 
     conn.commit()

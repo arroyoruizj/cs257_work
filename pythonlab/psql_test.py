@@ -36,7 +36,7 @@ def test_query_one():
 
     cur = conn.cursor()
 
-    sql = "SELECT state, code FROM states WHERE code = 'MN' "
+    sql = "SELECT code, code FROM states WHERE code = 'MN' "
     
     cur.execute( sql )
 

@@ -107,7 +107,7 @@ def test_query_four():
 
     conn.commit()
 
-def test_query_four():
+def test_query_five():
 
     conn = psycopg2.connect(
         host="localhost",
@@ -118,9 +118,28 @@ def test_query_four():
 
     cur = conn.cursor()
 
-    chosen_state = input(print("Please choose a state:"))
+    chosen_state = input(str("Please choose a state: "))
+    
+    if chosen_state.len() == 2:
+
+        abb_finder = "SELECT state FROM states WHERE code = %s"
+        
+        cur.execute(abb_finder, [chosen_state])
+
+        chosen_state = cur.fetchone()[0]
+
+    all_cits_and_pops = "SELECT city, population FROM cities WHERE state = %s"
+
+    cur.execute(all_cits_and_pops, [chosen_state])
+
+    row_list = cur.fetchall()
+
+    for row in row_list:
+        print(row)
+
 
 test_query_one()
 test_query_two()
 test_query_three()
 test_query_four()
+test_query_five()

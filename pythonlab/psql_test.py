@@ -29,10 +29,10 @@ def test_query_one():
     
     conn = psycopg2.connect(
         host="localhost",
-        port=9999,
-        database="mlepinski",
-        user="mlepinski",
-        password="MyDatabasePassword")
+        port=5432,   
+        database="arroyoruizj",
+        user="arroyoruizj",
+        password="sunshine987chip")
 
     cur = conn.cursor()
 
@@ -65,10 +65,10 @@ def test_query_all():
     
     conn = psycopg2.connect(
         host="localhost",
-        port=9999,
-        database="mlepinski",
-        user="mlepinski",
-        password="MyDatabasePassword")
+        port=5432,   
+        database="arroyoruizj",
+        user="arroyoruizj",
+        password="sunshine987chip")
 
     cur = conn.cursor()
 
@@ -100,10 +100,10 @@ def test_query_variable():
 
     conn = psycopg2.connect(
         host="localhost",
-        port=9999,
-        database="mlepinski",
-        user="mlepinski",
-        password="MyDatabasePassword")
+        port=5432,   
+        database="arroyoruizj",
+        user="arroyoruizj",
+        password="sunshine987chip")
 
     cur = conn.cursor()
 

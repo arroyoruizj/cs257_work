@@ -29,7 +29,7 @@ def test_query_one():
 
     else: 
 
-          return row
+          print(row)
 
     # Note: We could access individual items in the row
     # That is, row[0] would be the name column in the previous example

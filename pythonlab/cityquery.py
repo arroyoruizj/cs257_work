@@ -69,8 +69,8 @@ def test_query_three():
     
     cur.execute( max_finder )
 
-    row = cur.fetchone()
-    print(str(row) + " is the largest city in our datset!")
+    row = cur.fetchone()[0]
+    print(str(row) + " has the smallest population in Minnesota!")
 
     conn.commit()
 

@@ -5,6 +5,8 @@
 # which should create tables to hold the data 
 # in the two data files (cities and statements).
 
+import psycopg2
+
 def create_tables():
 
     # You will need to change the Port and the Password to use this code

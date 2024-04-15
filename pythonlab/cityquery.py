@@ -26,7 +26,7 @@ def test_query_one():
 
     if row == None:
 
-        print("Northfield is not in the dateset!")
+        print("Northfield is not in the dateset!" + "\n")
 
     else: 
 
@@ -50,7 +50,7 @@ def test_query_two():
     cur.execute( max_finder )
 
     row = cur.fetchone()[0]
-    print(str(row) + " is the largest city in our datset!")
+    print(str(row) + " is the largest city in our datset!" + "\n")
 
     conn.commit()
 
@@ -70,7 +70,7 @@ def test_query_three():
     cur.execute( max_finder )
 
     row = cur.fetchone()[0]
-    print(str(row) + " has the smallest population in Minnesota!")
+    print(str(row) + " has the smallest population in Minnesota!" + "\n")
 
     conn.commit()
 
@@ -88,22 +88,22 @@ def test_query_four():
     north_finder = "SELECT city FROM cities WHERE latitude = (SELECT MAX(latitude) FROM cities)"
     cur.execute(north_finder)
     row = cur.fetchone()[0]
-    print(str(row) + " is the most northern city!")
+    print(str(row) + " is the most northern city!" + "\n")
 
     south_finder = "SELECT city FROM cities WHERE latitude = (SELECT MIN(latitude) FROM cities)"
     cur.execute(south_finder)
     row = cur.fetchone()[0]
-    print(str(row) + " is the most southern city!")
+    print(str(row) + " is the most southern city!" + "\n")
 
     east_finder = "SELECT city FROM cities WHERE longitude = (SELECT MAX(longitude) FROM cities)"
     cur.execute(east_finder)
     row = cur.fetchone()[0]
-    print(str(row) + " is the most eastern city!")
+    print(str(row) + " is the most eastern city!" + "\n")
 
     west_finder = "SELECT city FROM cities WHERE longitude = (SELECT MIN(longitude) FROM cities)"
     cur.execute(west_finder)
     row = cur.fetchone()[0]
-    print(str(row) + " is the most western city!")
+    print(str(row) + " is the most western city!" + "\n")
 
     conn.commit()
 

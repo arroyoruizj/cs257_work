@@ -51,7 +51,7 @@ def test_query_two():
 
     row = cur.fetchone()
 
-    print(row[0])
+    print(row)
 
     conn.commit()
 

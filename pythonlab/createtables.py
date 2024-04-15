@@ -26,15 +26,13 @@ def create_tables():
                     state TEXT,
                     population NUMERIC(8,0),
                     latitude NUMERIC(5, 2),
-                    longitude NUMERIC(5, 2)
-                    );"""""
+                    longitude NUMERIC(5, 2));"""""
     
     states_tab = """DROP TABLE IF EXISTS states_df;
                     CREATE TABLE states_df (
                     code TEXT,
                     state TEXT,
-                    pop NUMERIC(8,0)
-                    );"""
+                    pop NUMERIC(8,0));"""
     
     cur.execute(cities_tab)
     cur.execute(states_tab)

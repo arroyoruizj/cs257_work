@@ -2,6 +2,26 @@
 # This library is already installed on stearns.mathcs.carleton.edu
 import psycopg2
 
+# This function tests to make sure that you can connect to the database
+def test_connection():
+
+    # You will need to change the Port and the Password to use this code
+    
+    conn = psycopg2.connect(
+        host="localhost",
+        port=5432,   
+        database="arroyoruizj",
+        user="arroyoruizj",
+        password="sunshine987chip")
+
+    if conn is not None:
+        print( "Connection Worked!" )
+    else:
+        print( "Problem with Connection" )
+
+    return None
+
+
 # This function sends an SQL query to the database
 def test_query_one():
 

@@ -120,7 +120,7 @@ def test_query_five():
 
     chosen_state = input(str("Please choose a state: "))
     
-    if chosen_state.len() == 2:
+    if len(chosen_state) == 2:
 
         abb_finder = "SELECT state FROM states WHERE code = %s"
         

@@ -8,5 +8,5 @@ DROP TABLE IF EXISTS states_list;
 CREATE TABLE states_list (
 code TEXT,
 state TEXT,
-pop NUMERIC(8,0)
+population NUMERIC(8,0)
 );

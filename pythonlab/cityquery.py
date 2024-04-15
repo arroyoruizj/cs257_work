@@ -45,13 +45,13 @@ def test_query_two():
 
     cur = conn.cursor()
 
-    sql = "SELECT city, MAX(population) FROM cities GROUP BY city"
+    max_finder = "SELECT MAX(population) FROM cities"
     
-    cur.execute( sql )
+    cur.execute( max_finder )
 
     row = cur.fetchone()
 
-    print(row)
+    print(row[0])
 
     conn.commit()
 

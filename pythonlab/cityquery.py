@@ -95,12 +95,12 @@ def test_query_four():
     row = cur.fetchone()[0]
     print(str(row) + " is the most southern city!")
 
-    east_finder = "SELECT city FROM cities WHERE longitude = (SELECT MAX(latitude) FROM cities)"
+    east_finder = "SELECT city FROM cities WHERE longitude = (SELECT MAX(longitude) FROM cities)"
     cur.execute(east_finder)
     row = cur.fetchone()[0]
     print(str(row) + " is the most eastern city!")
 
-    west_finder = "SELECT city FROM cities WHERE longitude = (SELECT MIN(latitude) FROM cities)"
+    west_finder = "SELECT city FROM cities WHERE longitude = (SELECT MIN(longitude) FROM cities)"
     cur.execute(west_finder)
     row = cur.fetchone()[0]
     print(str(row) + " is the most western city!")

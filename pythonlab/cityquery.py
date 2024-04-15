@@ -65,7 +65,7 @@ def test_query_three():
 
     cur = conn.cursor()
 
-    max_finder = "SELECT city FROM cities WHERE state = 'Minnesota' AND population = (SELECT MIN(population) FROM cities WHERE state = 'Minnesota');"
+    max_finder = "SELECT city FROM cities WHERE population = (SELECT MIN(population) FROM cities WHERE state = 'Minnesota');"
     
     cur.execute( max_finder )
 

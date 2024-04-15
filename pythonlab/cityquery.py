@@ -1,11 +1,13 @@
-# We use the psycopg2 library to help us connec to the Postgres SQL database
-# This library is already installed on stearns.mathcs.carleton.edu
+# cityquery.py
+# author: jared arroyo ruiz
+
+# the follwing code was created in order to determine
+# the following questions from the 'us-cities-top-1k.csv'
+# datset
+
 import psycopg2
 
-# This function sends an SQL query to the database
 def test_query_one():
-
-    # You will need to change the Port and the Password to use this code
     
     conn = psycopg2.connect(
         host="localhost",
@@ -20,7 +22,6 @@ def test_query_one():
     
     cur.execute( sql )
 
-    # fetchone() returns one row that matches your quer
     row = cur.fetchone()
 
     if row == None:
@@ -31,15 +32,28 @@ def test_query_one():
 
           print(row)
 
-    # Note: We could access individual items in the row
-    # That is, row[0] would be the name column in the previous example
-    #   ... and row[1] would be the abb column
+    conn.commit()
 
-    #IMPORTANT: This function doesn't actually change the database
-    #If we are trying to change the database ...
-    # ... for example, creating a table
-    #Then we need the following command to finalize our changes
+def test_query_two():
+    
+    conn = psycopg2.connect(
+        host="localhost",
+        port=5432,   
+        database="arroyoruizj",
+        user="arroyoruizj",
+        password="sunshine987chip")
+
+    cur = conn.cursor()
+
+    sql = "SELECT city, population FROM population WHERE MAX(population) "
+    
+    cur.execute( sql )
+
+    row = cur.fetchone()
+
+    print(row[0])
 
     conn.commit()
 
 test_query_one()
+test_query_two()

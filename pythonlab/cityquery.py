@@ -43,6 +43,8 @@ def test_query_one():
     # fetchone() returns one row that matches your quer
     row = cur.fetchone()
 
+    print(row)
+
     if row == None:
 
         print("Northfield is not in the dateset")

@@ -65,11 +65,11 @@ def test_query_three():
 
     cur = conn.cursor()
 
-    max_finder = "SELECT city FROM cities WHERE state = 'Minnesota' AND population = (SELECT MIN(population) FROM cities);"
+    max_finder = "SELECT city FROM cities WHERE state = 'Minnesota' AND population = (SELECT MIN(population) FROM cities WHERE state = 'Minnesota');"
     
     cur.execute( max_finder )
 
-    row = cur.fetchone()[0]
+    row = cur.fetchone()
     print(str(row) + " is the largest city in our datset!")
 
     conn.commit()

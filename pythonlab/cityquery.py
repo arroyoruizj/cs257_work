@@ -88,22 +88,22 @@ def test_query_four():
     north_finder = "SELECT city FROM cities WHERE latitude = (SELECT MAX(latitude) FROM cities)"
     cur.execute(north_finder)
     row = cur.fetchone()[0]
-    print(str(row) + " is the most northern city!" + "\n")
+    print(str(row) + " is the most northern city!")
 
     south_finder = "SELECT city FROM cities WHERE latitude = (SELECT MIN(latitude) FROM cities)"
     cur.execute(south_finder)
     row = cur.fetchone()[0]
-    print(str(row) + " is the most southern city!" + "\n")
+    print(str(row) + " is the most southern city!")
 
     east_finder = "SELECT city FROM cities WHERE longitude = (SELECT MAX(longitude) FROM cities)"
     cur.execute(east_finder)
     row = cur.fetchone()[0]
-    print(str(row) + " is the most eastern city!" + "\n")
+    print(str(row) + " is the most eastern city!")
 
     west_finder = "SELECT city FROM cities WHERE longitude = (SELECT MIN(longitude) FROM cities)"
     cur.execute(west_finder)
     row = cur.fetchone()[0]
-    print(str(row) + " is the most western city!" + "\n")
+    print(str(row) + " is the most western city!")
 
     conn.commit()
 

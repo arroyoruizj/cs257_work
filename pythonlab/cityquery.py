@@ -52,8 +52,28 @@ def test_query_two():
     row = cur.fetchone()[0]
     print(str(row) + " is the largest city in our datset!")
 
+    conn.commit()
+
+def test_query_three():
+    
+    conn = psycopg2.connect(
+        host="localhost",
+        port=5432,   
+        database="arroyoruizj",
+        user="arroyoruizj",
+        password="sunshine987chip")
+
+    cur = conn.cursor()
+
+    max_finder = "SELECT city FROM cities WHERE state = 'Minnesota' AND population = (SELECT MIN(population) FROM cities);"
+    
+    cur.execute( max_finder )
+
+    row = cur.fetchone()[0]
+    print(str(row) + " is the largest city in our datset!")
 
     conn.commit()
 
 test_query_one()
 test_query_two()
+test_query_three()

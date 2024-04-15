@@ -107,6 +107,19 @@ def test_query_four():
 
     conn.commit()
 
+def test_query_four():
+
+    conn = psycopg2.connect(
+        host="localhost",
+        port=5432,   
+        database="arroyoruizj",
+        user="arroyoruizj",
+        password="sunshine987chip")
+
+    cur = conn.cursor()
+
+    input = input(print("Please choose a state: "))
+
 test_query_one()
 test_query_two()
 test_query_three()

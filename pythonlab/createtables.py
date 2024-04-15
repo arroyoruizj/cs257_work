@@ -28,4 +28,8 @@ def create_tables():
 
     conn.commit()
 
-create_tables()
+def main():
+
+    create_tables()
+
+main()

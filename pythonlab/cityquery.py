@@ -51,7 +51,7 @@ def test_query_two():
 
     row = cur.fetchone()[0]
 
-    city_max = "SELECT * FROM cities WHERE population == %s"
+    city_max = "SELECT * FROM cities WHERE population == NUMERIC(%s)"
     
     cur.execute(city_max, [row])
 

@@ -45,7 +45,7 @@ def test_query_two():
 
     cur = conn.cursor()
 
-    sql = "SELECT cities, MAX(population) AS max_pop FROM city "
+    sql = "SELECT cities, MAX(population) AS max_pop FROM cities "
     
     cur.execute( sql )
 

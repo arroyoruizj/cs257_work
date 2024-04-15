@@ -49,9 +49,9 @@ def test_query_two():
     
     cur.execute( max_finder )
 
-    row = cur.fetchone()
+    row = cur.fetchone()[0]
 
-    print(row[0])
+    print(row)
 
     conn.commit()
 

@@ -45,7 +45,7 @@ def test_query_one():
 
     if row == None:
 
-        print("Northfield is not in the dateset")
+        print("Northfield is not in the dateset!")
 
     else: 
 

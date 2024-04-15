@@ -63,3 +63,5 @@ def test_query_one():
     #Then we need the following command to finalize our changes
 
     conn.commit()
+
+test_query_one()

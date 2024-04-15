@@ -45,15 +45,12 @@ def test_query_two():
 
     cur = conn.cursor()
 
-    max_finder = "SELECT MAX(population) FROM cities;"
+    max_finder = "SELECT city FROM cities WHERE population = (SELECT MAX(population) FROM cities);"
     
     cur.execute( max_finder )
 
     row = cur.fetchone()[0]
-
-    city_max = "SELECT * FROM cities WHERE population == NUMERIC(%s);"
-    
-    cur.execute(city_max, [row])
+    print(row)
 
     conn.commit()
 

@@ -20,8 +20,8 @@ def create_tables():
 
     cur = conn.cursor()
 
-    cities_tab = """DROP TABLE IF EXISTS cities;
-                    CREATE TABLE cities (
+    cities_tab = """DROP TABLE IF EXISTS cities_df;
+                    CREATE TABLE cities_df (
                     city TEXT,
                     state TEXT,
                     population NUMERIC(8,0),
@@ -29,8 +29,8 @@ def create_tables():
                     longitude NUMERIC(5, 2)
                     );"""""
     
-    states_tab = """DROP TABLE IF EXISTS states_list;
-                    CREATE TABLE states_list (
+    states_tab = """DROP TABLE IF EXISTS states_df;
+                    CREATE TABLE states_df (
                     code TEXT,
                     state TEXT,
                     pop NUMERIC(8,0)

@@ -51,7 +51,9 @@ def test_query_two():
 
     row = cur.fetchone()[0]
 
-    print(row)
+    city_max = "SELECT * FROM cities WHERE population == %s"
+    
+    cur.execute(city_max, [row])
 
     conn.commit()
 

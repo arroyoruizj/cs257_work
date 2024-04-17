@@ -104,13 +104,17 @@ def test_query_one():
     
     if len(chosen_state) == 2:
 
+        chosen_state = chosen_state.upper()
+
         abb_finder = "SELECT state FROM states WHERE code = %s"
         
-        cur.execute(abb_finder, [chosen_state.upper()])
+        cur.execute(abb_finder, [chosen_state])
 
         chosen_state = cur.fetchone()[0]
 
     all_cits_and_pops = "SELECT city, population FROM cities WHERE state = %s"
+
+    chosen_state = chosen_state.lower()
 
     cur.execute(all_cits_and_pops, [chosen_state.lower()])
 

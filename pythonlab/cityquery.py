@@ -106,7 +106,7 @@ def test_query_one():
 
         abb_finder = "SELECT state FROM states WHERE code = %s"
         
-        cur.execute(abb_finder, [chosen_state])
+        cur.execute(abb_finder, [chosen_state.upper()])
 
         chosen_state = cur.fetchone()[0]
 

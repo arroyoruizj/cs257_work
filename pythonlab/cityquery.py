@@ -61,7 +61,7 @@ def test_query_one():
     cur.execute( max_finder )
 
     row = cur.fetchone()[0]
-    print(str(row) + " is the largest city in our daaset!" + "\n")
+    print(str(row) + " is the largest city in our dataset!" + "\n")
 
     # Q3
     mn_max_finder = "SELECT city FROM cities WHERE population = (SELECT MIN(population) FROM cities WHERE state = 'Minnesota');"

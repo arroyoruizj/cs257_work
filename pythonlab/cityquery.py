@@ -112,7 +112,7 @@ def test_query_one():
 
         chosen_state = cur.fetchone()[0]
 
-    chosen_state = chosen_state.lower()
+    chosen_state = chosen_state.title()
 
     all_cits_and_pops = "SELECT city, population FROM cities WHERE state = %s"
 

@@ -100,6 +100,7 @@ def test_query_one():
 
     # Q5
     chosen_state = input(str("Please choose a state: "))
+
     
     if len(chosen_state) == 2:
 
@@ -111,7 +112,7 @@ def test_query_one():
 
     all_cits_and_pops = "SELECT city, population FROM cities WHERE state = %s"
 
-    cur.execute(all_cits_and_pops, [chosen_state])
+    cur.execute(all_cits_and_pops, [chosen_state.lower()])
 
     row_list = cur.fetchall()
 

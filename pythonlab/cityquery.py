@@ -93,7 +93,7 @@ def test_query_one():
         
         total_pop = total_pop + row[1]
 
-    print(str(chosen_state) + "has a population of: " + str(total_pop))
+    print(str(chosen_state) + " has a population of: " + str(total_pop))
 
     conn.commit()
 

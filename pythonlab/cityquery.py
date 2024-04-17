@@ -87,8 +87,13 @@ def test_query_one():
 
     row_list = cur.fetchall()
 
+    total_pop = 0
+
     for row in row_list:
-        print(str(row[0]) + " " + str(row[1]))
+        
+        total_pop = total_pop + row[1]
+
+    print(str(chosen_state) + "has a population of: " + str(total_pop))
 
     conn.commit()
 

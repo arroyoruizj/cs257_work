@@ -68,7 +68,7 @@ def test_query_one():
     west_finder = "SELECT city FROM cities WHERE longitude = (SELECT MIN(longitude) FROM cities)"
     cur.execute(west_finder)
     row = cur.fetchone()[0]
-    print(str(row) + " is the most western city!")
+    print(str(row) + " is the most western city!" + "\n")
 
     #jfkldjfkdajklfdjklajkldf
     chosen_state = input(str("Please choose a state: "))

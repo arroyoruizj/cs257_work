@@ -120,10 +120,11 @@ def test_query_one():
     for row in row_list:
         
         total_pop = total_pop + row[1]
-
+    
+    #Checks to see if user has provided an appropiate state
     if total_pop == 0:
 
-        print("Please choose a valid state name or abbreviation!")
+        print("ERROR: Please choose a valid state name or abbreviation!")
 
     else:
 

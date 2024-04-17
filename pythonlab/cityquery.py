@@ -121,7 +121,13 @@ def test_query_one():
         
         total_pop = total_pop + row[1]
 
-    print(str(chosen_state) + " has a total population of: " + str(total_pop))
+    if total_pop == 0:
+
+        print("Please choose a valid state name or abbreviation!")
+
+    else:
+
+        print(str(chosen_state) + " has a total population of: " + str(total_pop))
 
     conn.commit()
 

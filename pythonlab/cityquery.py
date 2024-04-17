@@ -18,9 +18,9 @@ def test_query_one():
 
     cur = conn.cursor()
 
-    sql = "SELECT state, city FROM cities WHERE city = 'Northfield' "
+    northfield_finder = "SELECT state, city FROM cities WHERE city = 'Northfield' "
     
-    cur.execute( sql )
+    cur.execute(northfield_finder)
 
     row = cur.fetchone()
 
@@ -31,20 +31,9 @@ def test_query_one():
     else: 
 
           print(row)
+          print()
 
-    conn.commit()
-
-def test_query_two():
-    
-    conn = psycopg2.connect(
-        host="localhost",
-        port=5432,   
-        database="arroyoruizj",
-        user="arroyoruizj",
-        password="sunshine987chip")
-
-    cur = conn.cursor()
-
+    #fajklfdjklafjkldlkklajfdjlajlfda
     max_finder = "SELECT city FROM cities WHERE population = (SELECT MAX(population) FROM cities);"
     
     cur.execute( max_finder )
@@ -52,39 +41,15 @@ def test_query_two():
     row = cur.fetchone()[0]
     print(str(row) + " is the largest city in our daaset!" + "\n")
 
-    conn.commit()
-
-def test_query_three():
+    #jfalkdfjakljfdklajfljdkakfldjl
+    mn_max_finder = "SELECT city FROM cities WHERE population = (SELECT MIN(population) FROM cities WHERE state = 'Minnesota');"
     
-    conn = psycopg2.connect(
-        host="localhost",
-        port=5432,   
-        database="arroyoruizj",
-        user="arroyoruizj",
-        password="sunshine987chip")
-
-    cur = conn.cursor()
-
-    max_finder = "SELECT city FROM cities WHERE population = (SELECT MIN(population) FROM cities WHERE state = 'Minnesota');"
-    
-    cur.execute( max_finder )
+    cur.execute(mn_max_finder)
 
     row = cur.fetchone()[0]
     print(str(row) + " has the smallest population in Minnesota!" + "\n")
 
-    conn.commit()
-
-def test_query_four():
-    
-    conn = psycopg2.connect(
-        host="localhost",
-        port=5432,   
-        database="arroyoruizj",
-        user="arroyoruizj",
-        password="sunshine987chip")
-
-    cur = conn.cursor()
-
+    #ajkldfjalfjdsalfjklajlkfdjlalfajdlkfjkla
     north_finder = "SELECT city FROM cities WHERE latitude = (SELECT MAX(latitude) FROM cities)"
     cur.execute(north_finder)
     row = cur.fetchone()[0]
@@ -105,19 +70,7 @@ def test_query_four():
     row = cur.fetchone()[0]
     print(str(row) + " is the most western city!")
 
-    conn.commit()
-
-def test_query_five():
-
-    conn = psycopg2.connect(
-        host="localhost",
-        port=5432,   
-        database="arroyoruizj",
-        user="arroyoruizj",
-        password="sunshine987chip")
-
-    cur = conn.cursor()
-
+    #jfkldjfkdajklfdjklajkldf
     chosen_state = input(str("Please choose a state: "))
     
     if len(chosen_state) == 2:
@@ -137,9 +90,7 @@ def test_query_five():
     for row in row_list:
         print(str(row[0]) + " " + str(row[1]))
 
+    conn.commit()
+
 
 test_query_one()
-test_query_two()
-test_query_three()
-test_query_four()
-test_query_five()

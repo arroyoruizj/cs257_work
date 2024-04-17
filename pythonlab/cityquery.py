@@ -104,6 +104,7 @@ def test_query_one():
     if len(chosen_state) == 2:
 
         chosen_state = chosen_state.upper()
+        print(chosen_state)
 
         abb_finder = "SELECT state FROM states WHERE code = %s"
         

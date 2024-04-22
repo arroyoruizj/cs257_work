@@ -40,7 +40,7 @@ def pop(abbrev):
     
     row = cur.fetchone()[0]
 
-    return str(row)
+    return "The population of " + abbrev + " is: " + str(row)
 
 if __name__ == '__main__':
     my_port = 5112

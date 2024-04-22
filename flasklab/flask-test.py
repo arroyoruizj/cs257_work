@@ -38,7 +38,7 @@ def pop(abbrev):
     
     cur.execute(sql, [abbrev])
     
-    row = cur.fetchone()
+    row = cur.fetchone()[0]
 
     return str(row)
 

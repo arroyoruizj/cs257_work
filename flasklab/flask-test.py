@@ -40,7 +40,7 @@ def pop(abbrev):
     
     row = cur.fetchone()
 
-    return row
+    return str(row)
 
 if __name__ == '__main__':
     my_port = 5112

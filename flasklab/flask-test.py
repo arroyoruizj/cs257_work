@@ -34,7 +34,7 @@ def pop(abbrev):
 
     cur = conn.cursor()
 
-    sql = "SELECT pop, code FROM states WHERE code = %s'"
+    sql = "SELECT pop, code FROM states WHERE code = %s"
     
     cur.execute(sql, [abbrev])
     

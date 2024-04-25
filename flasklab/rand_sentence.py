@@ -42,7 +42,7 @@ def rand_sent_gen():
     
     all_cities = list(cur.fetchall())
 
-    random_city = random.choice(all_cities)
+    random_city = random.choice(all_cities)[0]
 
     random_year = random.randint(0, 2024)
 

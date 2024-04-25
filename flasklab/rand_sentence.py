@@ -36,7 +36,7 @@ def rand_sent_gen():
 
     cur = conn.cursor()
 
-    sql = "SELECT pop, code FROM states WHERE code = %s"
+    sql = "SELECT city FROM cities"
     
     cur.execute(sql)
     

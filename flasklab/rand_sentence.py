@@ -16,7 +16,7 @@ def rand_sent_gen():
                   'fantastic', 'gorgeous', 'heavenly', 'impressionable', 'jumpy',
                   'kind', 'lawful', 'majestic', 'naive', 'optimistic',
                   'playful', 'quiet', 'radiant', 'sarcastic', 'talkative',
-                  'unpleasant', 'vigilant', 'weird', 'xanthic', 'young', 'zesty']
+                  'unpleasant', 'vigilant', 'weird', 'xanthic', 'youthful', 'zesty']
     
     names = ['Asher', 'Blake', 'Charlie', 'Daniel', 'Emery',
              'Florence', 'Grayson', 'Hayden', 'Indigo', 'Jamie',

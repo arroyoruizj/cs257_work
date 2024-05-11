@@ -9,11 +9,11 @@ def welcome():
 
 @app.route('/adventure')
 def welcome():
-    return render_template("homepage.html")
+    return render_template("hme.html")
 
 @app.route('/quit')
 def welcome():
-    return render_template("homepage.html")
+    return render_template("home.html")
 
 if __name__ == '__main__':
     my_port = 5112

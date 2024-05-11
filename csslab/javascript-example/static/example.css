@@ -3,7 +3,7 @@
   color: white;
   background-color: darkgreen;
   font: Garamond;
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .center-para{
@@ -14,4 +14,9 @@
 .big-button{
   text-align: center;
   font-size: large;
+}
+
+.center{
+  padding: 70px 0;
+  text-align: center;
 }

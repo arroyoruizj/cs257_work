@@ -31,3 +31,10 @@
   max-width: 600px;
   margin: 0 auto;
 }
+
+.center_image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

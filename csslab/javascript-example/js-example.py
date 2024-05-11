@@ -7,6 +7,14 @@ app = Flask(__name__)
 def welcome():
     return render_template("homepage.html")
 
+@app.route('/adventure')
+def welcome():
+    return render_template("homepage.html")
+
+@app.route('/quit')
+def welcome():
+    return render_template("homepage.html")
+
 if __name__ == '__main__':
     my_port = 5112
     app.run(host='0.0.0.0', port = my_port) 

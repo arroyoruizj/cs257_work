@@ -4,14 +4,14 @@
   <script src="/static/example.js"></script>
 </head>
 
-<h1 class="my-class" id="hello">
+<h1 class="my-class" id="Title">
   The Three Doors of Destiny
 </h1>
 
 
 <div class="center_div">
 
-<p class="center-para">
+<p class="center-para" id="par1">
   While walking in the arb, you come across three mysterious doors, each
   adorned with intricate carvings that seem to whisper secrets of the unknown. A 
   sense of anticipation fills the air as you realize the behind one of the doors lies
@@ -24,10 +24,17 @@
 </div>
 
 <p class="center-para">
-<button class="big-button" onclick="changeColor()">
+
+  <a href="/adventure">
+  <button class="big-button" id=adv_button>
    Let's go!
 </button>
-<button class="big-button" onclick="changeColor()">
-  I'd rather not
-</button>
+  </a>
+
+  <a href="/quit">
+  <button class="big-button" id=quit_button onclick="changeColor()">
+  I'd rather not.
+    </button>
+  </a>
+
 </p>

@@ -39,14 +39,11 @@
   width: 100%;
 }
 
-.row::after{
-  content: " ";
-  clear: both;
-  display: table;
+.row {
+  display: flex;
 }
 
-.column{
-  float: left;
+.column {
   width: 33.33%;
   padding: 5px;
 }

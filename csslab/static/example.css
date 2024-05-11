@@ -6,6 +6,14 @@
   font-size: 50px;
 }
 
+.my-class_lost{
+  text-align: center;
+  color: red;
+  background-color: darkgreen;
+  font: Garamond;
+  font-size: 50px;
+}
+
 .center-para{
   text-align: center;
   margin-top: 20px;

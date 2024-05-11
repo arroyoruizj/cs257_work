@@ -13,7 +13,7 @@ def adventure():
 
 @app.route('/quit')
 def quitter():
-    return render_template("home.html")
+    return render_template("quitter.html")
 
 if __name__ == '__main__':
     my_port = 5112

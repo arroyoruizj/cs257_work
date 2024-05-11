@@ -8,11 +8,11 @@ def welcome():
     return render_template("homepage.html")
 
 @app.route('/adventure')
-def welcome():
+def adventure():
     return render_template("hme.html")
 
 @app.route('/quit')
-def welcome():
+def quitter():
     return render_template("home.html")
 
 if __name__ == '__main__':

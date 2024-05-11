@@ -20,9 +20,10 @@
   padding: 70px 0;
   text-align: center;
   border: 3px solid green;
+  max-width: 500px;
 }
 
 .cushion{
-  max-width: 500px;
+
   text-align: center;
 }

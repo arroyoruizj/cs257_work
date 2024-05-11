@@ -9,7 +9,7 @@ def welcome():
 
 @app.route('/adventure')
 def adventure():
-    return render_template("hme.html")
+    return render_template("adventure.html")
 
 @app.route('/quit')
 def quitter():

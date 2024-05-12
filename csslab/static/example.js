@@ -9,9 +9,7 @@ function changeColor() {
 function reveal(clicked_image) {
 
   if (counter==0){
-  button_1 = document.getElementById("hid_1")
-  button_2 = document.getElementById("hid_2")
-
+    
   image_clicked = document.getElementById(clicked_image)
   result_text = document.getElementById("adv_results")
   header_text = document.getElementById("adv_title")
@@ -29,12 +27,7 @@ function reveal(clicked_image) {
         result_text.style.color = "black"
         header_text.style.color = "red"
     }
-  
-    button_1.style.backgroundColor = "red";
-    button_1.style.font = "20px"; // Corrected font assignment
-    button_1.style.display = "block"; // Show the button
   }
-
   counter=1
 
 }

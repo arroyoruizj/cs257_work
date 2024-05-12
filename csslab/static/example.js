@@ -1,3 +1,5 @@
+counter = 0
+
 function changeColor() {
   the_heading = document.getElementById("hello");
   the_heading.style.color = "red";
@@ -5,7 +7,6 @@ function changeColor() {
 }
 
 function reveal(clicked_image) {
-  counter = 0
 
   if (counter==0){
 
@@ -28,7 +29,7 @@ function reveal(clicked_image) {
         header_text.style.color = "red"
         }
 
-    counter=1
-  }
   
+  }
+  counter=1
 }

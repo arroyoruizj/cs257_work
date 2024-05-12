@@ -5,6 +5,11 @@ function changeColor() {
 }
 
 function reveal(clicked_image) {
+  counter = 0
+
+  if (counter==0){
+
+
   image_clicked = document.getElementById(clicked_image)
   result_text = document.getElementById("adv_results")
   header_text = document.getElementById("adv_title")
@@ -22,5 +27,8 @@ function reveal(clicked_image) {
         result_text.style.color = "black"
         header_text.style.color = "red"
         }
+
+    counter=1
+  }
   
 }

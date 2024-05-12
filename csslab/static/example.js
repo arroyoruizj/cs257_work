@@ -12,10 +12,12 @@ function reveal(clicked_image) {
     if (random_num === 3) {
         image_clicked.src = "static/images/money_door.png";
         result_text.innerText = "Congratulations! You chose the correct door."
+        result_text.style.color = "black";
         } 
     else {
         image_clicked.src = "static/images/snake_door.png";
         result_text.innerText = "You chose the wrong door!"
+        result_text.style.color = "black"
         }
   
 }

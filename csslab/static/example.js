@@ -30,8 +30,9 @@ function reveal(clicked_image) {
         header_text.style.color = "red"
     }
   
-    button_1.style.background = "red"
-    button_1.style.font = 20
+    button_1.style.background = "red";
+    button_1.style.font = "20px"; // Corrected font assignment
+    button_1.style.display = "block"; // Show the button
   }
 
   counter=1

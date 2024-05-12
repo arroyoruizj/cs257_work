@@ -9,7 +9,8 @@ function changeColor() {
 function reveal(clicked_image) {
 
   if (counter==0){
-
+  button_1 = document.getElementById("hid_1")
+  button_2 = document.getElementById("hid_2")
 
   image_clicked = document.getElementById(clicked_image)
   result_text = document.getElementById("adv_results")
@@ -27,9 +28,13 @@ function reveal(clicked_image) {
         result_text.innerText = "You chose the wrong door!"
         result_text.style.color = "black"
         header_text.style.color = "red"
-        }
-
+    }
   
+    button_1.style.color = "red"
+    button_1.style.font = 50
   }
+
   counter=1
+
+
 }

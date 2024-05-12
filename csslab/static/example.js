@@ -30,8 +30,8 @@ function reveal(clicked_image) {
         header_text.style.color = "red"
     }
   
-    button_1.style.backgroundColor = "red"
-    button_1.style.font = 10
+    button_1.style.background = "red"
+    button_1.style.font = 20
   }
 
   counter=1

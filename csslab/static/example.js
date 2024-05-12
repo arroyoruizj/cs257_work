@@ -6,13 +6,13 @@ function changeColor() {
 
 function reveal(clicked_image) {
   image_clicked = document.getElementById(clicked_image)
-  random_num = randint(1, 3)
+  random_num = Math.floor(Math.random() * 3) + 1;
 
-  if (random_num == 3){
-    image_clicked.src = "static/images/money_door.png"
-  }
-  else {
-    image_clicked.src = "static/image/snake_door.png"
-  }
+    if (random_num === 3) {
+        image_clicked.src = "static/images/money_door.png";
+        } 
+    else {
+        image_clicked.src = "static/images/snake_door.png";
+        }
   
 }

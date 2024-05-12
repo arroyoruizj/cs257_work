@@ -54,3 +54,9 @@
   font-size: 25px;
   color: white;
 }
+
+.hidden_button {
+    background: transparent;
+    border: none;
+    font-size:0;
+}
